@@ -1,0 +1,58 @@
+Ejercicio 2 Practico 10 mostrar el valor minimo del vector
+
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar(double vec[],int n);
+void mostrar(double vec[],int n);
+double comparar(double vec[],int n);
+
+void main()
+
+{
+double vec[MAX],m;
+int n;
+cout<<"Ingrese el tamaño del vector"<<endl;
+cin>>n;
+cargar(vec,n);
+m=comparar(vec,n);
+cout<<"El digito menor del vector es: "<<m<<endl;
+getch();
+}
+void cargar(double vec[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		cout<<"ingrese vec["<<i<<"]=";
+		cin>>vec[i];
+	}
+
+}
+void mostrar(double vec[],int n)
+{ int i;
+  for(i=0;i<n;i++)
+  {
+    cout<<"vec["<<i<<"]="<<vec[i];
+  
+  }
+}
+double comparar (double vec[],int n)
+{  double min=vec[0]; 
+   int i;
+   for(i=0;i<n;i++)
+	{
+	  if(min<vec[i])
+	  min=min;
+      else 
+	  min=vec[i];
+   }
+
+   return min;
+     
+
+}
+
